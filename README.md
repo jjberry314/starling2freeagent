@@ -20,11 +20,10 @@ The current CSV format is this:
 
 ```
 $ cat sample.csv
-Date,Counter Party,Reference,Type,Amount (GBP),Balance (GBP)
+Date,Counter Party,Reference,Type,Amount (EUR),Balance (EUR),Spending Category,Notes
 ,Opening Balance,,,,0.00
-31/03/2018,Starling Bank,March Interest Earned,INTEREST PAYMENT,0.02,0.02
-03/04/2018,Company A,INVOICE 12345,CHAPS,1250.50,1250.52
-03/04/2018,Company B,BILL 54312,CHAPS,-500.20,750.30
+09/05/2022,My Company,Transfer,SEPA PAYMENT,3132.01,3132.01,REVENUE,transfer from MyOldBank to Starling
+09/05/2022,My Company,Transfer to GBP account,CURRENCY TRANSFER,-2132.01,1000.00,TRANSFERS,
 ```
 
 > **Note:** Sometimes the _Opening Balance_ line is not included in the CSV. This tool automatically skips the _Opening Balance_ line if it is included in the input CSV.
@@ -40,7 +39,6 @@ This will generate a FreeAgent version of the file with the prefix `fa-`
 
 ```
 $ cat fa-sample.csv
-31/03/2018,0.02,March Interest Earned
-03/04/2018,1250.50,INVOICE 12345
-03/04/2018,-500.20,BILL 54312
+09/05/2022,3132.01,SEPA PAYMENT: My Company [ref: Transfer] transfer from MyOldBank to Starling
+09/05/2022,-2132.01,CURRENCY TRANSFER: My Company [ref: Transfer to GBP account]
 ```

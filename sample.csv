@@ -1,5 +1,4 @@
-Date,Counter Party,Reference,Type,Amount (GBP),Balance (GBP)
+Date,Counter Party,Reference,Type,Amount (EUR),Balance (EUR),Spending Category,Notes
 ,Opening Balance,,,,0.00
-31/03/2018,Starling Bank,March Interest Earned,INTEREST PAYMENT,0.02,0.02
-03/04/2018,Company A,INVOICE 12345,CHAPS,1250.50,1250.52
-03/04/2018,Company B,BILL 54312,CHAPS,-500.20,750.30
+09/05/2022,My Company,Transfer,SEPA PAYMENT,3132.01,3132.01,REVENUE,transfer from MyOldBank to Starling
+09/05/2022,My Company,Transfer to GBP account,CURRENCY TRANSFER,-2132.01,1000.00,TRANSFERS,
